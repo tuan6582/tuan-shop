@@ -1,0 +1,67 @@
+@use '../../App.scss';
+
+
+
+.page-navigation-left {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin-top: 2rem;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 12.5rem;
+
+    .left-top {
+        &>h3 {
+            font-weight: 600;
+            color: #daa785;
+            font-family: "Ms Madi", cursive;
+            font-size: 4rem;
+            margin: 2rem 0;
+        }
+
+        .left-top-list {
+            border: 2px solid #ccc;
+            padding: 2rem;
+            background-color: #fff;
+
+            &>li {
+                margin: 1.5rem 0;
+
+                &>a {
+                    color: #707070;
+                    font-size: 1.6rem;
+                    font-weight: 500;
+
+                    &:hover {
+                        color: #48cab2;
+                    }
+                }
+            }
+
+            .group-item {
+                @extend %flexItems;
+                font-size: 1.6rem;
+                margin: 1.5rem 0;
+
+                &>input {
+                    width: 20px;
+                    height: 20px;
+                    margin-right: 1.2rem;
+                    cursor: pointer;
+                }
+
+                &>label {
+                    margin-bottom: 0;
+                    cursor: pointer;
+                    color: #707070;
+                    font-size: 1.6rem;
+                    font-weight: 500;
+
+                    &:hover {
+                        color: #48cab2;
+                    }
+                }
+            }
+        }
+    }
+}

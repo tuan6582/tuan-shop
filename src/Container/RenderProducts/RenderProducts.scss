@@ -1,0 +1,114 @@
+@use '../../App.scss';
+
+.product-item {
+
+    background-color: #fff;
+    border: 2px solid #ccc;
+    padding: 1rem;
+
+    &>a {
+        display: block;
+
+        &>.product-image {
+            overflow: hidden;
+            margin: 2rem 0;
+            position: relative;
+
+            &>img {
+                transition: all 0.5s;
+                transform: scale(1);
+                background-repeat: no-repeat;
+                background-size: cover;
+                object-fit: cover;
+                max-width: 100%;
+                max-height: 100%;
+            }
+
+        }
+
+        &>.product-image::before {
+            content: "";
+            position: absolute;
+            left: 10px;
+            right: 10px;
+            border-left: 2px solid #fff;
+            border-right: 2px solid #fff;
+            border-bottom: 2px solid #fff;
+            border-top: 2px solid #fff;
+            z-index: 1;
+            top: 10px;
+            bottom: 10px;
+            transform: scale(0);
+            opacity: 0;
+            transition: all 0.3s;
+        }
+
+        .info-product {
+            text-align: center;
+
+            &>h3 {
+                font-size: 1.5rem;
+                color: #007bff;
+                transition: all 0.3s;
+                display: block;
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                margin-bottom: 2rem;
+
+                &:hover {
+                    color: #daa785;
+                }
+            }
+        }
+
+    }
+
+
+    .buy-product {
+        @extend %gridCenter;
+
+        &>span {
+            color: #096f47;
+            font-weight: 700;
+            font-size: 1.7rem;
+            margin-bottom: 2rem;
+        }
+
+        &>a {
+            display: block;
+
+            &>button {
+                outline: none;
+                border: 1px solid #ccc;
+                padding: 1rem 2rem;
+                font-size: 1.6rem;
+                font-weight: 600;
+                background-color: #daa785;
+                color: #fff;
+                border-radius: 2px;
+                transition: all 0.3s;
+                width: 100%;
+
+                &:hover {
+                    background-color: #333;
+                    border-color: #333;
+                }
+            }
+        }
+
+
+    }
+
+    &:hover .product-image>img {
+        transform: scale(1.1);
+        overflow: hidden;
+    }
+
+    &:hover .product-image::before {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+}

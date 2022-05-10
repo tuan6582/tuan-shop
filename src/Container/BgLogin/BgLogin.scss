@@ -1,0 +1,20 @@
+@use '../../App.scss';
+
+.bg-login {
+    background: url('https://bizweb.dktcdn.net/100/372/651/themes/802187/assets/bg_breadcrumb.jpg?1607312601798');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 6rem 0 8rem 0;
+    background-attachment: fixed;
+    position: relative;
+
+    .overlay-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+}

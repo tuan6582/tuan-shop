@@ -1,0 +1,124 @@
+@use '../../App.scss';
+
+.contact-body {
+    margin-bottom: 3rem;
+}
+
+.contact-left {
+    margin-bottom: 2rem;
+
+    .contact-info {
+        display: flex;
+        justify-content: space-between;
+        padding: 3rem 4rem;
+        border: 2px solid #e1e1e1;
+        color: #0E1C22;
+        background-color: rgb(250, 243, 235);
+        border-radius: 4px;
+
+        .contact-info-item {
+            flex: 1;
+            font-size: 1.8rem;
+            margin: 0 1.2rem;
+
+            .title-icon {
+                font-size: 2rem;
+                margin-bottom: 1.2rem;
+
+                &>i {
+                    margin-right: 1.2rem;
+                    font-size: 2.5rem;
+                }
+            }
+
+            .contact-list {
+                &>li {
+                    margin: 1rem 0;
+
+                    &>a {
+                        display: block;
+                        color: #0E1C22;
+                        transition: all 0.3s;
+
+                        &:hover {
+                            color: #d9121f;
+                        }
+
+                        &>i {
+                            margin-right: 1.2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+.contact-submit {
+    padding: 3rem 4rem;
+    border: 2px solid #e1e1e1;
+    color: #0E1C22;
+    background-color: rgb(250, 243, 235);
+    border-radius: 4px;
+
+    .contact-form-group {
+        display: grid;
+
+        margin-bottom: 2rem;
+
+        &>label {
+            color: #0E1C22;
+            text-transform: uppercase;
+            font-size: 1.8rem;
+            opacity: 0.6;
+            margin-bottom: 0;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        &>input {
+            border: none;
+            outline: none;
+            font-size: 1.8rem;
+            background-color: transparent;
+            border-bottom: 2px solid #ccc;
+        }
+
+        .form-submit {
+            margin-top: 2rem;
+            text-align: center;
+
+            &>button {
+                outline: none;
+                border: 1px solid #ccc;
+                padding: 1rem 2rem;
+                font-size: 1.6rem;
+                font-weight: 600;
+                background-color: #daa785;
+                color: #fff;
+                border-radius: 2px;
+                transition: all 0.3s;
+                width: 100%;
+                margin-top: 2rem;
+
+                &:hover {
+                    background-color: #333;
+                    border-color: #333;
+                }
+            }
+        }
+    }
+
+}
+
+
+
+.contact-top {
+    margin: 2rem 0;
+    border-bottom: 2px solid #ccc;
+
+    &>h3 {
+        font-size: 2.5rem;
+    }
+}

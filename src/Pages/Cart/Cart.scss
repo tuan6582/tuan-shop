@@ -1,0 +1,153 @@
+@use '../../App.scss';
+
+
+.cart {
+    margin-bottom: 2rem;
+}
+
+
+.cart-top {
+    background: url('https://bizweb.dktcdn.net/100/372/651/themes/802187/assets/bg_breadcrumb.jpg?1607312601798');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 6rem 0 8rem 0;
+    background-attachment: fixed;
+    position: relative;
+
+    .overlay-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+}
+
+.cart-back {
+    @extend %flexCenter;
+    font-size: 2rem;
+
+    &>a {
+        color: #007bff;
+        transition: all 0.2s;
+
+        &:hover {
+            color: #daa785;
+        }
+    }
+
+    &>span {
+        margin: 0 1rem;
+        color: #48cab2;
+    }
+
+    &>p {
+        margin-bottom: 0;
+        color: #05f8cb;
+    }
+}
+
+.cart-item {
+    @extend %flexItems;
+    margin: 2rem 0;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 4px;
+
+    .cart-image {
+        &>img {
+            border-radius: 4px;
+        }
+    }
+
+    .cart-info {
+        display: grid;
+        margin-left: 2rem;
+
+        &>h3 {
+            font-size: 1.6rem;
+            color: #007bff;
+            display: block;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            transition: all 0.2s;
+
+            &:hover {
+                color: #333;
+            }
+        }
+
+        &>span {
+            color: #daa785;
+            font-weight: 700;
+            font-size: 1.4rem;
+            margin: 2rem 0;
+
+        }
+
+        &>button {
+            outline: none;
+            border: 1px solid #ccc;
+            padding: 1rem 2rem;
+            font-size: 1.6rem;
+            font-weight: 600;
+            background-color: #333;
+            color: #fff;
+            border-radius: 2px;
+        }
+    }
+}
+
+.create-button {
+    margin: 3rem 0 2rem 0;
+    text-align: right;
+
+    &>button {
+        outline: none;
+        border: 1px solid #ccc;
+        padding: 1rem 2rem;
+        font-size: 1.6rem;
+        font-weight: 600;
+        background-color: #daa785;
+        color: #fff;
+        border-radius: 2px;
+        transition: all 0.3s;
+
+        &:hover {
+            background-color: #333;
+            border-color: #333;
+        }
+    }
+}
+
+.price-button {
+    margin: 3rem 0 2rem 0;
+    text-align: right;
+
+    &>span {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+}
+
+.no-product {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    display: grid;
+
+    &>span {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 2rem;
+    }
+
+    &>a {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+}

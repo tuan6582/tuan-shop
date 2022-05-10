@@ -1,0 +1,129 @@
+@use '../../App.scss';
+
+.header-app {
+    background-color: #333;
+    color: var(--white-color);
+    padding: 1rem 0;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+
+    .header-title {
+        &>a {
+            display: inline-block;
+        }
+
+        .icon-mobile {
+            font-size: 3rem;
+            cursor: pointer;
+            display: none;
+        }
+    }
+
+    .list-menu {
+        @extend %flexBetween;
+
+        .list-menu-item>.active {
+            color: #0089ff;
+        }
+
+        .list-menu-item>a {
+            font-size: 1.8rem;
+            font-weight: 500;
+            color: #fff;
+            transition: all 0.3s;
+
+            &:hover {
+                color: #0089ff;
+            }
+
+        }
+
+    }
+
+
+}
+
+.icon-mode {
+    display: none;
+}
+
+.header-app-active {
+    background-color: #333;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 99;
+    animation: activeNavTop ease 1s;
+}
+
+.menu-mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #3a589d;
+    z-index: 999;
+    width: 280px;
+    height: 100%;
+    transform: translateX(-100%);
+    transition: all 0.3s ease;
+
+    .list-menu {
+        display: grid;
+
+        &>li {
+            .active {
+                color: #007bff;
+                background-color: #daa785;
+            }
+
+            &>a {
+                display: block;
+                padding: 1rem 2rem;
+                font-size: 1.5rem;
+                font-weight: 500;
+                color: #fff;
+                transition: all 0.2s;
+
+                &:hover {
+                    color: #007bff;
+                    background-color: #daa785;
+                }
+            }
+
+            &>div {
+                display: block;
+                padding: 1rem 2rem;
+                font-size: 1.5rem;
+                font-weight: 500;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.overlay-mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    display: none;
+    transition: all 0.5s ease;
+}
+
+@keyframes activeNavTop {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
